@@ -8,7 +8,7 @@ El objetivo del proyecto fue replicar un esquema laboral de un/a Front-End Devel
 
 ## Mobile version
 
-<img align="center" height="500px" src="https://user-images.githubusercontent.com/51206642/86972960-629d6400-c139-11ea-9b68-65276a1ac9aa.png">
+<p align="center"><img width="312px" height="" src="https://user-images.githubusercontent.com/51206642/86972960-629d6400-c139-11ea-9b68-65276a1ac9aa.png"></p>
 
 ## Desktop Version
 
