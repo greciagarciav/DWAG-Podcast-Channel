@@ -1,0 +1,85 @@
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+%margin-white-section {
+    margin: 29px 16px;
+}
+
+%margin-title-white-section {
+    margin: 14px 16px;
+}
+
+%bg-img-lg {
+    background-image: linear-gradient(to bottom, $third-color,$fourth-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; 
+}
+
+body {
+    font-family: $first-font, monospace;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $second-font, sans-serif;
+}
+
+p {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 16px 0;
+}
+
+button {
+    @include size(288px, 48px);
+}
+
+button:hover {
+    color: $first-color;
+    background-image: linear-gradient(to right, $fifth-color, $third-color);
+}
+
+.container {
+    @include size(100%, _);
+}
+
+.btn-style {
+    background-color: $fifth-color;
+    color: $sixth-color;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0;
+    font-family: $first-font;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.title {
+    font-size: 36px;
+    margin: 0;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}

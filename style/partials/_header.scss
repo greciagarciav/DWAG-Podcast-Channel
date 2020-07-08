@@ -1,0 +1,116 @@
+//menu nav mobile
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked~.menu {
+    display: block;
+}
+
+input[type="checkbox"]:checked~.burguer-icon {
+    display: none;
+}
+
+input[type="checkbox"]:checked~.close-icon{
+    display: block;
+}
+
+// header
+header {
+    background-color: $first-color;
+    position: fixed;
+    top: 0;
+    nav {
+        @include size(_, 44px);
+        position: relative;
+        img {
+            @include size(24px, 24px);
+            margin: 10px 16px 6px;
+        }
+        .burguer-icon {
+            display: block;
+            font-size: 20px;
+            position: absolute;
+            top: 10px;
+            right: 16px;
+            cursor: pointer;
+        }
+        .close-icon {
+            display: none;
+            font-size: 20px;  
+            position: absolute;
+            top: 10px;
+            right: 17.5px;
+            cursor: pointer;
+        }
+        ul.menu {
+        display: none;
+        background-color: $second-color;
+        height: 224px;       
+            li {
+                list-style: none;
+                padding: 16px 0px 10px;
+                font-family: $first-font;
+                font-size: 16px;
+                line-height: 28px;
+                a {
+                    color: $first-color;
+                    margin: 12px 16px;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    header {
+        nav {
+            @include size(_, 60px);
+            display: flex;
+            justify-content: space-between;
+            img {
+                @include size(30px, 30px);
+                margin: 12px 16px; 
+            }
+            .burguer-icon {
+                display: none;
+            }
+            .close-icon {
+                display: none;
+            }
+            ul.menu {
+                display: flex;
+                background-color: $first-color;
+                height: 60px;
+                margin-right: 20px;
+                li {                   
+                    a {
+                        color: $sixth-color;
+                        margin: 10px;
+                    }
+                    a:hover {
+                        color: $fifth-color;
+                    }
+                    a:active {
+                        text-decoration: line-through;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 992px) {
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+}

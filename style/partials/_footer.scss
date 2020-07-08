@@ -1,0 +1,44 @@
+footer {
+    position: relative;
+    top: -50px;
+    p {
+        margin: 24px 46.5px 16px;
+    }
+    .sociallogos-container {
+        margin: 16px 35px 0;
+        display: flex;
+        i {
+            margin: 0 16px;
+            cursor: pointer;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+        position: inherit;
+        top: 0;
+        .sociallogos-container {
+            margin: 24px 46.5px 16px;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 600px) {
+    
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 992px) {
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+}
