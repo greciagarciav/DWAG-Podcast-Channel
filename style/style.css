@@ -295,7 +295,11 @@ main {
   main section.gallery {
     display: flex;
     flex-direction: column;
-    overflow: hidden; }
+    overflow: hidden;
+    top: -150px; }
+    main section.gallery h3.title {
+      font-size: 48px;
+      margin-left: 200px; }
     main section.gallery .gallery-container {
       display: flex;
       flex-direction: column; }
@@ -328,6 +332,27 @@ main {
       main section.episodes .episodes-container .right-container iframe:first-child {
         margin-bottom: 63px; }
 
+  main section.about {
+    top: -220px; }
+    main section.about img {
+      margin-left: 184px; }
+    main section.about .aboutdescription-container {
+      margin-left: 64.2px; }
+      main section.about .aboutdescription-container h3 {
+        font-size: 48px; }
+      main section.about .aboutdescription-container p {
+        font-size: 16px; }
+
+  main section.topics h3.title {
+    font-size: 48px;
+    margin-bottom: 56px; }
+  main section.topics div.topics-container div {
+    width: 260px; }
+    main section.topics div.topics-container div img {
+      margin-bottom: 29px; }
+  main section.topics div.topics-container div.re-progra {
+    height: 175px; }
+
   main section.news {
     display: flex;
     flex-direction: column;
@@ -342,7 +367,8 @@ main {
       width: 345px;
       height: 56px; }
     main section.news .btn-style {
-      font-size: 18px; } }
+      font-size: 18px;
+      cursor: pointer; } }
 footer {
   position: relative;
   top: -50px; }
