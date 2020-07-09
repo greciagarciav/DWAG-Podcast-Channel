@@ -13,6 +13,9 @@ main {
         h2 span.blue-dot {
             color: $second-color;
         }
+        p.txt-desk {
+            display: none;
+        }
     }
     section.episodes {
         position: relative;
@@ -181,6 +184,26 @@ main {
     main {
         margin-top: 200px;
     }
+    main section.welcome {
+        h2 {
+            font-size: 64px;
+            margin: 0 200px;
+            line-height: 84px;
+        }
+        p.txt-mob {
+            display: none;
+        }
+        p.txt-desk {
+            display: block;
+            width: 628px;
+            font-size: 16px;
+            line-height: 24px;
+            margin: 0 200px;
+        }
+        button {
+            margin: 56px 200px;
+        }
+    }
     main section.gallery {
         display: flex;
         flex-direction: column;
@@ -202,7 +225,31 @@ main {
     main section.episodes {
         height: 1042.6px;
         clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%);
-
+        h3.title {
+            margin: 186px 200px 15px;
+            padding-top: 0;
+            font-size: 48px;
+        }
+        .episodes-container {
+            margin: 0 91px;
+            .left-container {
+                margin-right: 63px;
+                iframe {
+                    max-width: initial;
+                }
+                iframe:first-child {
+                    margin-bottom: 63px;
+                }
+            }
+            .right-container {
+                iframe {
+                    max-width: initial;
+                }
+                iframe:first-child {
+                    margin-bottom: 63px;
+                }
+            }
+        }
     }
     main section.news {
         display: flex;
@@ -212,6 +259,7 @@ main {
         height: 518px;
         clip-path: polygon(0% 25%, 100% 0%, 100% 100%, 0% 100%);
         .title {
+            padding-top: 113px;
             font-size: 48px;
         }
         button {

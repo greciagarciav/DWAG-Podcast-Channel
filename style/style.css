@@ -166,6 +166,8 @@ main {
       text-decoration: line-through; }
     main section.welcome h2 span.blue-dot {
       color: #0000EC; }
+    main section.welcome p.txt-desk {
+      display: none; }
   main section.episodes {
     position: relative;
     clip-path: polygon(0% 3%, 100% 0%, 100% 97%, 0% 100%);
@@ -275,6 +277,21 @@ main {
   main {
     margin-top: 200px; }
 
+  main section.welcome h2 {
+    font-size: 64px;
+    margin: 0 200px;
+    line-height: 84px; }
+  main section.welcome p.txt-mob {
+    display: none; }
+  main section.welcome p.txt-desk {
+    display: block;
+    width: 628px;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 200px; }
+  main section.welcome button {
+    margin: 56px 200px; }
+
   main section.gallery {
     display: flex;
     flex-direction: column;
@@ -294,6 +311,22 @@ main {
   main section.episodes {
     height: 1042.6px;
     clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%); }
+    main section.episodes h3.title {
+      margin: 186px 200px 15px;
+      padding-top: 0;
+      font-size: 48px; }
+    main section.episodes .episodes-container {
+      margin: 0 91px; }
+      main section.episodes .episodes-container .left-container {
+        margin-right: 63px; }
+        main section.episodes .episodes-container .left-container iframe {
+          max-width: initial; }
+        main section.episodes .episodes-container .left-container iframe:first-child {
+          margin-bottom: 63px; }
+      main section.episodes .episodes-container .right-container iframe {
+        max-width: initial; }
+      main section.episodes .episodes-container .right-container iframe:first-child {
+        margin-bottom: 63px; }
 
   main section.news {
     display: flex;
@@ -303,6 +336,7 @@ main {
     height: 518px;
     clip-path: polygon(0% 25%, 100% 0%, 100% 100%, 0% 100%); }
     main section.news .title {
+      padding-top: 113px;
       font-size: 48px; }
     main section.news button {
       width: 345px;
