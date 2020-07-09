@@ -6,11 +6,11 @@ Desde el sitio se puede escuchar podcasts reales que están embebidos junto con 
 
 El objetivo del proyecto fue replicar un esquema laboral de un/a Front-End Developer, por lo que se realizó la implementación para que quede igual al diseño de referencia.
 
-## Mobile version
+## Mobile version - 320
 
 <p align="center"><img width="312px" height="" src="https://user-images.githubusercontent.com/51206642/86972960-629d6400-c139-11ea-9b68-65276a1ac9aa.png"></p>
 
-## Desktop Version
+## Desktop Version - 1440
 
 <img align="center" src="https://user-images.githubusercontent.com/51206642/86972934-56190b80-c139-11ea-9d83-dbe3069a365d.png">
 
