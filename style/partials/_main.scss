@@ -16,7 +16,6 @@ main {
     }
     section.episodes {
         position: relative;
-
         @extend %bg-img-lg;
         clip-path: polygon(0% 3%, 100% 0%, 100% 97%, 0% 100%);
         overflow: hidden;
@@ -85,7 +84,7 @@ main {
     }
     section.news {
         position: relative;
-        top: -60px;
+        top: -53px;
         @extend %bg-img-lg;
         clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
         h3 {
@@ -100,23 +99,130 @@ main {
 }
 
 @media only screen and (min-width: 321px) {
+    main section.episodes .episodes-container iframe {
+        max-width: 450px; 
+    }
+
    main section.news {
         top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
 @media only screen and (min-width: 600px) {
-   
+    main section.episodes {
+        display: flex;
+        flex-direction: column;
+        .episodes-container {
+            display: flex;
+            flex-direction: row;
+            .left-container,
+            .right-container {
+                display: flex;
+                flex-direction: column;
+                width: 584px;
+            }
+            iframe {
+                width: 100%;
+            }
+        }
+    }
+    main section.about {
+        display: flex;
+        align-items: center;
+        div {
+            max-width: 464px;
+        }
+    }
+    main section.gallery {
+        display: flex;
+        flex-direction: column;
+        .gallery-container {
+            // display: flex;
+            // flex-direction: column;
+            // max-width: 100vw;
+            display: inline-flex;
+            .up-container,
+            .down-container {
+                // display: flex;
+                // // flex-direction: row;
+                // max-width: 1440px;
+            }
+        }
+    }
+    main section.topics {
+        h3 {
+            margin: 14px 200px;
+        }
+        div.topics-container {
+            flex-direction: row;
+
+            div {
+                display: inline-block;
+            // flex-direction: row;
+    
+            }
+        }
+        
+    }
 }
 
 @media only screen and (min-width: 768px) {
-
+    main section.news {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media only screen and (min-width: 992px) {
 
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1280px) {
+    main {
+        margin-top: 200px;
+    }
+    main section.gallery {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        .gallery-container {
+            display: flex;
+            flex-direction: column;
+            .up-container,
+            .down-container {
+                display: flex;
+                flex-direction: row;
+                img {
+                    width: 480px;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    main section.episodes {
+        height: 1042.6px;
+        clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%);
 
+    }
+    main section.news {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 518px;
+        clip-path: polygon(0% 25%, 100% 0%, 100% 100%, 0% 100%);
+        .title {
+            font-size: 48px;
+        }
+        button {
+            @include size(345px, 56px);
+        }
+        .btn-style {
+            font-size: 18px;
+        }
+    }
 }

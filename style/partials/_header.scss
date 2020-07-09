@@ -111,6 +111,32 @@ header {
 
 }
 
-@media only screen and (min-width: 1200px) {
-
+@media only screen and (min-width: 1280px) {
+    header {
+        nav {
+            @include size(_, 80px);
+            a {
+                margin-left: 64px;
+            }
+            img {
+                @include size(36px, 36px);
+                margin: 22px 36px; 
+            }
+            ul.menu {
+                margin-right: 52px;
+                li {     
+                    padding: 26px 0 26px;              
+                    a {
+                        margin: 26px 48px;
+                    }
+                    a:hover {
+                        color: $fifth-color;
+                    }
+                    a:active {
+                        text-decoration: line-through;
+                    }
+                }
+            }
+        }
+    }
 }
