@@ -140,15 +140,11 @@ main {
         display: flex;
         flex-direction: column;
         .gallery-container {
-            // display: flex;
-            // flex-direction: column;
-            // max-width: 100vw;
+
             display: inline-flex;
             .up-container,
             .down-container {
-                // display: flex;
-                // // flex-direction: row;
-                // max-width: 1440px;
+               
             }
         }
     }
