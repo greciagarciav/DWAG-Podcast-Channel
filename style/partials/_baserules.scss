@@ -41,29 +41,8 @@ p {
     margin: 16px 0;
 }
 
-button {
-    @include size(288px, 48px);
-}
-
-button:hover {
-    color: $first-color;
-    background-image: linear-gradient(to right, $fifth-color, $third-color);
-}
-
 .container {
     @include size(100%, _);
-}
-
-.btn-style {
-    background-color: $fifth-color;
-    color: $sixth-color;
-    font-size: 16px;
-    line-height: 22px;
-    letter-spacing: 0;
-    font-family: $first-font;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
 }
 
 .title {

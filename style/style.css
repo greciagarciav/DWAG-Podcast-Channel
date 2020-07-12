@@ -28,28 +28,9 @@ p {
   line-height: 22px;
   margin: 16px 0; }
 
-button {
-  width: 288px;
-  height: 48px; }
-
-button:hover {
-  color: #FFFFFF;
-  background-image: linear-gradient(to right, #00F3BB, #0000FF); }
-
 .container {
   width: 100%;
   height: _; }
-
-.btn-style {
-  background-color: #00F3BB;
-  color: #060A24;
-  font-size: 16px;
-  line-height: 22px;
-  letter-spacing: 0;
-  font-family: "IBM Plex Mono";
-  font-weight: 600;
-  border: none;
-  cursor: pointer; }
 
 .title {
   font-size: 36px;
@@ -168,6 +149,21 @@ main {
       color: #0000EC; }
     main section.welcome p.txt-desk {
       display: none; }
+    main section.welcome button.btn-style {
+      width: 288px;
+      height: 48px;
+      background-image: linear-gradient(to right, #00F3BB, #00F3BB);
+      color: #060A24;
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: 0;
+      font-family: "IBM Plex Mono";
+      font-weight: 600;
+      border: none;
+      cursor: pointer; }
+    main section.welcome button:hover {
+      color: #FFFFFF;
+      background-image: linear-gradient(to right, #00F3BB, #0000FF); }
   main section.episodes {
     position: relative;
     clip-path: polygon(0% 3%, 100% 0%, 100% 97%, 0% 100%);
@@ -225,6 +221,21 @@ main {
       color: #FFFFFF; }
     main section.news button {
       margin: 36px 16px 67px; }
+    main section.news button.btn-style {
+      width: 288px;
+      height: 48px;
+      background-image: linear-gradient(to right, #00F3BB, #00F3BB);
+      color: #060A24;
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: 0;
+      font-family: "IBM Plex Mono";
+      font-weight: 600;
+      border: none;
+      cursor: pointer; }
+    main section.news button:hover {
+      color: #FFFFFF;
+      background-image: linear-gradient(to right, #00F3BB, #0000FF); }
 
 @media only screen and (min-width: 321px) {
   main section.episodes .episodes-container iframe {
@@ -276,99 +287,92 @@ main {
 @media only screen and (min-width: 1280px) {
   main {
     margin-top: 200px; }
-
-  main section.welcome h2 {
-    font-size: 64px;
-    margin: 0 200px;
-    line-height: 84px; }
-  main section.welcome p.txt-mob {
-    display: none; }
-  main section.welcome p.txt-desk {
-    display: block;
-    width: 628px;
-    font-size: 16px;
-    line-height: 24px;
-    margin: 0 200px; }
-  main section.welcome button {
-    margin: 56px 200px; }
-
-  main section.gallery {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    top: -150px; }
-    main section.gallery h3.title {
-      font-size: 48px;
-      margin-left: 200px; }
-    main section.gallery .gallery-container {
+    main section.welcome h2 {
+      font-size: 64px;
+      margin: 0 200px;
+      line-height: 84px; }
+    main section.welcome p.txt-mob {
+      display: none; }
+    main section.welcome p.txt-desk {
+      display: block;
+      width: 628px;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0 200px; }
+    main section.welcome button.btn-style {
+      margin: 56px 200px; }
+    main section.gallery {
       display: flex;
-      flex-direction: column; }
-      main section.gallery .gallery-container .up-container,
-      main section.gallery .gallery-container .down-container {
+      flex-direction: column;
+      overflow: hidden;
+      top: -150px; }
+      main section.gallery h3.title {
+        font-size: 48px;
+        margin-left: 200px; }
+      main section.gallery .gallery-container {
         display: flex;
-        flex-direction: row; }
-        main section.gallery .gallery-container .up-container img,
-        main section.gallery .gallery-container .down-container img {
-          width: 480px;
-          height: 100%; }
-
-  main section.episodes {
-    height: 1042.6px;
-    clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%); }
-    main section.episodes h3.title {
-      margin: 186px 200px 15px;
-      padding-top: 0;
-      font-size: 48px; }
-    main section.episodes .episodes-container {
-      margin: 0 91px; }
-      main section.episodes .episodes-container .left-container {
-        margin-right: 63px; }
-        main section.episodes .episodes-container .left-container iframe {
-          max-width: initial; }
-        main section.episodes .episodes-container .left-container iframe:first-child {
-          margin-bottom: 63px; }
-      main section.episodes .episodes-container .right-container iframe {
-        max-width: initial; }
-      main section.episodes .episodes-container .right-container iframe:first-child {
-        margin-bottom: 63px; }
-
-  main section.about {
-    top: -220px; }
-    main section.about img {
-      margin-left: 184px; }
-    main section.about .aboutdescription-container {
-      margin-left: 64.2px; }
-      main section.about .aboutdescription-container h3 {
+        flex-direction: column; }
+        main section.gallery .gallery-container .up-container,
+        main section.gallery .gallery-container .down-container {
+          display: flex;
+          flex-direction: row; }
+          main section.gallery .gallery-container .up-container img,
+          main section.gallery .gallery-container .down-container img {
+            width: 480px;
+            height: 100%; }
+    main section.episodes {
+      height: 1042.6px;
+      clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%); }
+      main section.episodes h3.title {
+        margin: 186px 200px 15px;
+        padding-top: 0;
         font-size: 48px; }
-      main section.about .aboutdescription-container p {
-        font-size: 16px; }
-
-  main section.topics h3.title {
-    font-size: 48px;
-    margin-bottom: 56px; }
-  main section.topics div.topics-container div {
-    width: 260px; }
-    main section.topics div.topics-container div img {
-      margin-bottom: 29px; }
-  main section.topics div.topics-container div.re-progra {
-    height: 175px; }
-
-  main section.news {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 518px;
-    clip-path: polygon(0% 25%, 100% 0%, 100% 100%, 0% 100%); }
-    main section.news .title {
-      padding-top: 113px;
-      font-size: 48px; }
-    main section.news button {
-      width: 345px;
-      height: 56px; }
-    main section.news .btn-style {
-      font-size: 18px;
-      cursor: pointer; } }
+      main section.episodes .episodes-container {
+        margin: 0 91px; }
+        main section.episodes .episodes-container .left-container {
+          margin-right: 63px; }
+          main section.episodes .episodes-container .left-container iframe {
+            max-width: initial; }
+          main section.episodes .episodes-container .left-container iframe:first-child {
+            margin-bottom: 63px; }
+        main section.episodes .episodes-container .right-container iframe {
+          max-width: initial; }
+        main section.episodes .episodes-container .right-container iframe:first-child {
+          margin-bottom: 63px; }
+    main section.about {
+      top: -220px; }
+      main section.about img {
+        margin-left: 184px; }
+      main section.about .aboutdescription-container {
+        margin-left: 64.2px; }
+        main section.about .aboutdescription-container h3 {
+          font-size: 48px; }
+        main section.about .aboutdescription-container p {
+          font-size: 16px; }
+    main section.topics h3.title {
+      font-size: 48px;
+      margin-bottom: 56px; }
+    main section.topics div.topics-container div {
+      width: 260px; }
+      main section.topics div.topics-container div img {
+        margin-bottom: 29px; }
+    main section.topics div.topics-container div.re-progra {
+      height: 175px; }
+    main section.news {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 518px;
+      clip-path: polygon(0% 25%, 100% 0%, 100% 100%, 0% 100%); }
+      main section.news .title {
+        padding-top: 113px;
+        font-size: 48px; }
+      main section.news button {
+        width: 345px;
+        height: 56px; }
+      main section.news button.btn-style {
+        font-size: 18px; } }
 footer {
   position: relative;
   top: -50px; }

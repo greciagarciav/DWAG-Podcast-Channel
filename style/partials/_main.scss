@@ -5,7 +5,6 @@ main {
     z-index: -1;
     section.welcome {
         position: relative;
-
         @extend %margin-white-section;
         h2 span.line-through {
             text-decoration: line-through;
@@ -15,6 +14,22 @@ main {
         }
         p.txt-desk {
             display: none;
+        }
+        button.btn-style {
+            @include size(288px, 48px);
+            background-image: linear-gradient(to right, $fifth-color, $fifth-color);
+            color: $sixth-color;
+            font-size: 16px;
+            line-height: 22px;
+            letter-spacing: 0;
+            font-family: $first-font;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            color: $first-color;
+            background-image: linear-gradient(to right, $fifth-color, $third-color);
         }
     }
     section.episodes {
@@ -98,6 +113,22 @@ main {
         button {
             margin: 36px 16px 67px;
         }
+        button.btn-style {
+            @include size(288px, 48px);
+            background-image: linear-gradient(to right, $fifth-color, $fifth-color);
+            color: $sixth-color;
+            font-size: 16px;
+            line-height: 22px;
+            letter-spacing: 0;
+            font-family: $first-font;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            color: $first-color;
+            background-image: linear-gradient(to right, $fifth-color, $third-color);
+        }
     }
 }
 
@@ -143,12 +174,7 @@ main {
         display: flex;
         flex-direction: column;
         .gallery-container {
-
             display: inline-flex;
-            .up-container,
-            .down-container {
-               
-            }
         }
     }
     main section.topics {
@@ -176,136 +202,136 @@ main {
     }
 }
 
-@media only screen and (min-width: 992px) {
-
-}
-
 @media only screen and (min-width: 1280px) {
     main {
         margin-top: 200px;
-    }
-    main section.welcome {
-        h2 {
-            font-size: 64px;
-            margin: 0 200px;
-            line-height: 84px;
+
+        section.welcome {
+            h2 {
+                font-size: 64px;
+                margin: 0 200px;
+                line-height: 84px;
+            }
+            p.txt-mob {
+                display: none;
+            }
+            p.txt-desk {
+                display: block;
+                width: 628px;
+                font-size: 16px;
+                line-height: 24px;
+                margin: 0 200px;
+            }
+            button.btn-style {
+                margin: 56px 200px;
+            }
+            // button:hover {
+            //     color: $first-color;
+            //     background-image: linear-gradient(to right, $fifth-color, $third-color);
+            // }
         }
-        p.txt-mob {
-            display: none;
-        }
-        p.txt-desk {
-            display: block;
-            width: 628px;
-            font-size: 16px;
-            line-height: 24px;
-            margin: 0 200px;
-        }
-        button {
-            margin: 56px 200px;
-        }
-    }
-    main section.gallery {
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        top: -150px;
-        h3.title {
-            font-size: 48px;
-            margin-left: 200px;
-        }
-        .gallery-container {
+
+        section.gallery {
             display: flex;
             flex-direction: column;
-            .up-container,
-            .down-container {
+            overflow: hidden;
+            top: -150px;
+            h3.title {
+                font-size: 48px;
+                margin-left: 200px;
+            }
+            .gallery-container {
                 display: flex;
-                flex-direction: row;
-                img {
-                    width: 480px;
-                    height: 100%;
+                flex-direction: column;
+                .up-container,
+                .down-container {
+                    display: flex;
+                    flex-direction: row;
+                    img {
+                        width: 480px;
+                        height: 100%;
+                    }
                 }
             }
         }
-    }
-    main section.episodes {
-        height: 1042.6px;
-        clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%);
-        h3.title {
-            margin: 186px 200px 15px;
-            padding-top: 0;
-            font-size: 48px;
-        }
-        .episodes-container {
-            margin: 0 91px;
-            .left-container {
-                margin-right: 63px;
-                iframe {
-                    max-width: initial;
-                }
-                iframe:first-child {
-                    margin-bottom: 63px;
-                }
-            }
-            .right-container {
-                iframe {
-                    max-width: initial;
-                }
-                iframe:first-child {
-                    margin-bottom: 63px;
-                }
-            }
-        }
-    }
-
-    main section.about {
-        top: -220px;
-        img {
-            margin-left: 184px;
-        }
-        .aboutdescription-container {
-            margin-left: 64.2px;
-            h3 {
+        section.episodes {
+            height: 1042.6px;
+            clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%);
+            h3.title {
+                margin: 186px 200px 15px;
+                padding-top: 0;
                 font-size: 48px;
             }
-            p {
-                font-size: 16px;
-            }
-        }
-    }
-    main section.topics {
-        h3.title {
-            font-size: 48px;
-            margin-bottom: 56px;
-        }
-        div.topics-container {
-            div {
-                width: 260px;
-                img {
-                    margin-bottom: 29px;
+            .episodes-container {
+                margin: 0 91px;
+                .left-container {
+                    margin-right: 63px;
+                    iframe {
+                        max-width: initial;
+                    }
+                    iframe:first-child {
+                        margin-bottom: 63px;
+                    }
+                }
+                .right-container {
+                    iframe {
+                        max-width: initial;
+                    }
+                    iframe:first-child {
+                        margin-bottom: 63px;
+                    }
                 }
             }
-            div.re-progra {
-                height: 175px;
+        }
+        section.about {
+            top: -220px;
+            img {
+                margin-left: 184px;
+            }
+            .aboutdescription-container {
+                margin-left: 64.2px;
+                h3 {
+                    font-size: 48px;
+                }
+                p {
+                    font-size: 16px;
+                }
             }
         }
-    }
-    main section.news {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 518px;
-        clip-path: polygon(0% 25%, 100% 0%, 100% 100%, 0% 100%);
-        .title {
-            padding-top: 113px;
-            font-size: 48px;
+        section.topics {
+            h3.title {
+                font-size: 48px;
+                margin-bottom: 56px;
+            }
+            div.topics-container {
+                div {
+                    width: 260px;
+                    img {
+                        margin-bottom: 29px;
+                    }
+                }
+                div.re-progra {
+                    height: 175px;
+                }
+            }
         }
-        button {
-            @include size(345px, 56px);
+        section.news {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 518px;
+            clip-path: polygon(0% 25%, 100% 0%, 100% 100%, 0% 100%);
+            .title {
+                padding-top: 113px;
+                font-size: 48px;
+            }
+            button {
+                @include size(345px, 56px);
+            }
+            button.btn-style {
+                font-size: 18px;
+            }
         }
-        .btn-style {
-            font-size: 18px;
-            cursor: pointer;
-        }
-    }
+    } 
 }
