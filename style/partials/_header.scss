@@ -20,6 +20,7 @@ header {
     background-color: $first-color;
     position: fixed;
     top: 0;
+    z-index: 999;
     nav {
         @include size(_, 44px);
         position: relative;

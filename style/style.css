@@ -4,7 +4,7 @@ main section.welcome, main section.about {
 main section.gallery h3, main section.topics h3 {
   margin: 14px 16px; }
 
-main section.episodes, main section.news {
+main section.episodes {
   background-image: linear-gradient(to bottom, #0000FF, #0000A3); }
 
 * {
@@ -51,7 +51,8 @@ input[type="checkbox"]:checked ~ .close-icon {
 header {
   background-color: #FFFFFF;
   position: fixed;
-  top: 0; }
+  top: 0;
+  z-index: 999; }
   header nav {
     width: _;
     height: 44px;
@@ -139,8 +140,7 @@ header {
 main {
   min-width: 320px;
   margin-top: 80px;
-  position: relative;
-  z-index: -1; }
+  position: relative; }
   main section.welcome {
     position: relative; }
     main section.welcome h2 span.line-through {
@@ -211,31 +211,6 @@ main {
         margin: 0; }
       main section.topics div img {
         margin: 13px; }
-  main section.news {
-    position: relative;
-    top: -53px;
-    clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%); }
-    main section.news h3 {
-      text-align: center;
-      padding-top: 64px;
-      color: #FFFFFF; }
-    main section.news button {
-      margin: 36px 16px 67px; }
-    main section.news button.btn-style {
-      width: 288px;
-      height: 48px;
-      background-image: linear-gradient(to right, #00F3BB, #00F3BB);
-      color: #060A24;
-      font-size: 16px;
-      line-height: 22px;
-      letter-spacing: 0;
-      font-family: "IBM Plex Mono";
-      font-weight: 600;
-      border: none;
-      cursor: pointer; }
-    main section.news button:hover {
-      color: #FFFFFF;
-      background-image: linear-gradient(to right, #00F3BB, #0000FF); }
 
 @media only screen and (min-width: 321px) {
   main section.episodes .episodes-container iframe {
@@ -279,11 +254,6 @@ main {
     flex-direction: row; }
     main section.topics div.topics-container div {
       display: inline-block; } }
-@media only screen and (min-width: 768px) {
-  main section.news {
-    display: flex;
-    flex-direction: column;
-    align-items: center; } }
 @media only screen and (min-width: 1280px) {
   main {
     margin-top: 200px; }
@@ -318,7 +288,7 @@ main {
           flex-direction: row; }
           main section.gallery .gallery-container .up-container img,
           main section.gallery .gallery-container .down-container img {
-            width: 480px;
+            width: 33%;
             height: 100%; }
     main section.episodes {
       height: 1042.6px;
@@ -357,25 +327,35 @@ main {
       main section.topics div.topics-container div img {
         margin-bottom: 29px; }
     main section.topics div.topics-container div.re-progra {
-      height: 175px; }
-    main section.news {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 518px;
-      clip-path: polygon(0% 25%, 100% 0%, 100% 100%, 0% 100%); }
-      main section.news .title {
-        padding-top: 113px;
-        font-size: 48px; }
-      main section.news button {
-        width: 345px;
-        height: 56px; }
-      main section.news button.btn-style {
-        font-size: 18px; } }
+      height: 175px; } }
 footer {
   position: relative;
   top: -50px; }
+  footer section.news {
+    position: relative;
+    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+    clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%); }
+    footer section.news h3 {
+      text-align: center;
+      padding-top: 64px;
+      color: #FFFFFF; }
+    footer section.news button {
+      margin: 36px 16px 67px; }
+    footer section.news button.btn-style {
+      width: 288px;
+      height: 48px;
+      background-image: linear-gradient(to right, #00F3BB, #00F3BB);
+      color: #060A24;
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: 0;
+      font-family: "IBM Plex Mono";
+      font-weight: 600;
+      border: none;
+      cursor: pointer; }
+    footer section.news button:hover {
+      color: #FFFFFF;
+      background-image: linear-gradient(to right, #00F3BB, #0000FF); }
   footer p {
     margin: 24px 46.5px 16px; }
   footer .sociallogos-container {
@@ -392,17 +372,40 @@ footer {
     align-items: center;
     position: inherit;
     top: 0; }
+    footer section.news {
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%; }
     footer p {
       margin-bottom: 0px; }
     footer .sociallogos-container {
       margin: 24px 46.5px 16px; } }
 @media only screen and (min-width: 650px) {
   footer {
+    all: unset;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     position: inherit;
     top: 0; }
+    footer section.news {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 518px;
+      width: 100%;
+      clip-path: polygon(0% 25%, 100% 0%, 100% 100%, 0% 100%); }
+      footer section.news .title {
+        padding-top: 113px;
+        font-size: 48px; }
+      footer section.news button {
+        width: 345px;
+        height: 56px; }
+      footer section.news button.btn-style {
+        font-size: 18px; }
     footer p {
       margin-bottom: 16px;
       font-size: 16px; }
@@ -410,5 +413,10 @@ footer {
       margin: 24px 46.5px 16px; }
       footer .sociallogos-container i {
         font-size: 18px; } }
+@media only screen and (min-width: 768px) {
+  footer section.news {
+    display: flex;
+    flex-direction: column;
+    align-items: center; } }
 
 /*# sourceMappingURL=style.css.map */
