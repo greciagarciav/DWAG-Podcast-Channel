@@ -174,13 +174,19 @@ main {
       color: #FFFFFF; }
     main section.episodes .episodes-container {
       padding-bottom: 143.5px; }
-      main section.episodes .episodes-container iframe {
-        max-width: 301px;
-        width: 100%;
-        height: 232px;
-        border: 0;
-        display: block;
-        margin: 9px; }
+      main section.episodes .episodes-container .left-container,
+      main section.episodes .episodes-container .right-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        main section.episodes .episodes-container .left-container iframe,
+        main section.episodes .episodes-container .right-container iframe {
+          max-width: 301px;
+          width: 100%;
+          height: 232px;
+          border: 0;
+          display: block;
+          margin: 9px; }
   main section.about {
     position: relative;
     top: -138px; }
@@ -224,15 +230,20 @@ main {
 @media only screen and (min-width: 600px) {
   main section.episodes {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: center; }
+    main section.episodes div.ctn-title {
+      align-self: flex-start; }
     main section.episodes .episodes-container {
       display: flex;
-      flex-direction: row; }
+      flex-direction: row;
+      width: 90%; }
       main section.episodes .episodes-container .left-container,
       main section.episodes .episodes-container .right-container {
         display: flex;
         flex-direction: column;
-        width: 584px; }
+        width: 50%;
+        margin: 0 5px; }
       main section.episodes .episodes-container iframe {
         width: 100%; }
 
@@ -288,27 +299,35 @@ main {
           flex-direction: row; }
           main section.gallery .gallery-container .up-container img,
           main section.gallery .gallery-container .down-container img {
-            width: 33%;
+            width: 33.3%;
             height: 100%; }
     main section.episodes {
       height: 1042.6px;
+      display: flex;
+      align-items: center;
       clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%); }
-      main section.episodes h3.title {
-        margin: 186px 200px 15px;
-        padding-top: 0;
-        font-size: 48px; }
+      main section.episodes div.ctn-title {
+        align-self: flex-start; }
+        main section.episodes div.ctn-title h3.title {
+          margin: 186px 200px 15px;
+          padding-top: 0;
+          font-size: 48px; }
       main section.episodes .episodes-container {
-        margin: 0 91px; }
+        margin: 0 91px;
+        width: 80%; }
         main section.episodes .episodes-container .left-container {
+          width: 50%;
           margin-right: 63px; }
           main section.episodes .episodes-container .left-container iframe {
             max-width: initial; }
           main section.episodes .episodes-container .left-container iframe:first-child {
             margin-bottom: 63px; }
-        main section.episodes .episodes-container .right-container iframe {
-          max-width: initial; }
-        main section.episodes .episodes-container .right-container iframe:first-child {
-          margin-bottom: 63px; }
+        main section.episodes .episodes-container .right-container {
+          width: 50%; }
+          main section.episodes .episodes-container .right-container iframe {
+            max-width: initial; }
+          main section.episodes .episodes-container .right-container iframe:first-child {
+            margin-bottom: 63px; }
     main section.about {
       top: -220px; }
       main section.about img {
@@ -406,13 +425,16 @@ footer {
         height: 56px; }
       footer section.news button.btn-style {
         font-size: 18px; }
-    footer p {
-      margin-bottom: 16px;
-      font-size: 16px; }
-    footer .sociallogos-container {
-      margin: 24px 46.5px 16px; }
-      footer .sociallogos-container i {
-        font-size: 18px; } }
+    footer div.ctn-networks {
+      display: flex;
+      justify-content: space-between; }
+      footer div.ctn-networks p {
+        margin-bottom: 16px;
+        font-size: 16px; }
+      footer div.ctn-networks .sociallogos-container {
+        margin: 24px 46.5px 16px; }
+        footer div.ctn-networks .sociallogos-container i {
+          font-size: 18px; } }
 @media only screen and (min-width: 768px) {
   footer section.news {
     display: flex;

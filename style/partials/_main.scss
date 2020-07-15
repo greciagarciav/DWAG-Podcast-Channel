@@ -43,15 +43,20 @@ main {
         }
         .episodes-container {
             padding-bottom: 143.5px;
-            iframe{
-                max-width: 301px;
-                @include size(100%, 232px);
-                border: 0;
-                display: block;
-                margin: 9px;
+            .left-container,
+            .right-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                iframe{
+                    max-width: 301px;
+                    @include size(100%, 232px);
+                    border: 0;
+                    display: block;
+                    margin: 9px;
+                }
             }
-        }
-        
+        } 
     }
     section.about {
         @extend %margin-white-section;
@@ -99,36 +104,6 @@ main {
         }
 
     }
-    // section.news {
-    //     position: relative;
-    //     top: -53px;
-    //     @extend %bg-img-lg;
-    //     clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
-    //     h3 {
-    //         text-align: center;
-    //         padding-top: 64px;
-    //         color: $first-color;
-    //     }
-    //     button {
-    //         margin: 36px 16px 67px;
-    //     }
-    //     button.btn-style {
-    //         @include size(288px, 48px);
-    //         background-image: linear-gradient(to right, $fifth-color, $fifth-color);
-    //         color: $sixth-color;
-    //         font-size: 16px;
-    //         line-height: 22px;
-    //         letter-spacing: 0;
-    //         font-family: $first-font;
-    //         font-weight: 600;
-    //         border: none;
-    //         cursor: pointer;
-    //     }
-    //     button:hover {
-    //         color: $first-color;
-    //         background-image: linear-gradient(to right, $fifth-color, $third-color);
-    //     }
-    // }
 }
 
 @media only screen and (min-width: 321px) {
@@ -148,14 +123,20 @@ main {
     main section.episodes {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        div.ctn-title {
+            align-self: flex-start;
+        }
         .episodes-container {
             display: flex;
             flex-direction: row;
+            width: 90%;
             .left-container,
             .right-container {
                 display: flex;
                 flex-direction: column;
-                width: 584px;
+                width: 50%;
+                margin: 0 5px;
             }
             iframe {
                 width: 100%;
@@ -184,22 +165,12 @@ main {
             flex-direction: row;
 
             div {
-                display: inline-block;
-            // flex-direction: row;
-    
+                display: inline-block;    
             }
         }
         
     }
 }
-
-// @media only screen and (min-width: 768px) {
-//     main section.news {
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//     }
-// }
 
 @media only screen and (min-width: 1280px) {
     main {
@@ -243,7 +214,7 @@ main {
                     display: flex;
                     flex-direction: row;
                     img {
-                        width: 33%;
+                        width: 33.3%;
                         height: 100%;
                     }
                 }
@@ -251,15 +222,24 @@ main {
         }
         section.episodes {
             height: 1042.6px;
+            display: flex;
+            align-items: center;
             clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%);
+           
+           div.ctn-title {
+               align-self: flex-start;
             h3.title {
                 margin: 186px 200px 15px;
                 padding-top: 0;
                 font-size: 48px;
             }
+           }
+            
             .episodes-container {
                 margin: 0 91px;
+                width: 80%;
                 .left-container {
+                    width: 50%;
                     margin-right: 63px;
                     iframe {
                         max-width: initial;
@@ -269,6 +249,7 @@ main {
                     }
                 }
                 .right-container {
+                    width: 50%;
                     iframe {
                         max-width: initial;
                     }
@@ -310,23 +291,5 @@ main {
                 }
             }
         }
-        // section.news {
-        //     display: flex;
-        //     flex-direction: column;
-        //     align-items: center;
-        //     justify-content: center;
-        //     height: 518px;
-        //     clip-path: polygon(0% 25%, 100% 0%, 100% 100%, 0% 100%);
-        //     .title {
-        //         padding-top: 113px;
-        //         font-size: 48px;
-        //     }
-        //     button {
-        //         @include size(345px, 56px);
-        //     }
-        //     button.btn-style {
-        //         font-size: 18px;
-        //     }
-        // }
     } 
 }
