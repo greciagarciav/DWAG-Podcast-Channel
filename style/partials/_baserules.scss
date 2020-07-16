@@ -42,7 +42,7 @@ p {
 }
 
 .container {
-    @include size(100%, _);
+    width: 100%;
 }
 
 .title {

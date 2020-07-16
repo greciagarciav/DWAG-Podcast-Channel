@@ -2,6 +2,7 @@ main {
     min-width: 320px;
     margin-top: 80px;
     position: relative;
+
     section.welcome {
         position: relative;
         @extend %margin-white-section;
@@ -14,8 +15,11 @@ main {
         p.txt-desk {
             display: none;
         }
-        button.btn-style {
+        div.btn-style {
             @include size(288px, 48px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background-image: linear-gradient(to right, $fifth-color, $fifth-color);
             color: $sixth-color;
             font-size: 16px;
@@ -25,12 +29,19 @@ main {
             font-weight: 600;
             border: none;
             cursor: pointer;
+            a {
+                color: $sixth-color;
+                text-decoration: none;
+            }
+            a:hover {
+                color: $first-color;
+            }
         }
-        button:hover {
-            color: $first-color;
+        div:hover {
             background-image: linear-gradient(to right, $fifth-color, $third-color);
         }
     }
+
     section.episodes {
         position: relative;
         @extend %bg-img-lg;
@@ -58,16 +69,18 @@ main {
             }
         } 
     }
+
     section.about {
         @extend %margin-white-section;
         position: relative;
         top: -138px;
         img {
             max-width: 460px;
-            @include size(100%, _);
+            width: 100%;
         }
 
     }
+
     section.gallery {
         position: relative;
         top: -100px;
@@ -75,11 +88,12 @@ main {
             @extend %margin-title-white-section;
         }
         img {
-            @include size(100%, _);
+            width: 100%;
             display: block;
         }
 
     }
+
     section.topics {
         position: relative;
         top: -80px;
@@ -102,7 +116,6 @@ main {
                 margin: 13px;
             }
         }
-
     }
 }
 
@@ -143,6 +156,7 @@ main {
             }
         }
     }
+
     main section.about {
         display: flex;
         align-items: center;
@@ -150,6 +164,7 @@ main {
             max-width: 464px;
         }
     }
+
     main section.gallery {
         display: flex;
         flex-direction: column;
@@ -157,6 +172,7 @@ main {
             display: inline-flex;
         }
     }
+
     main section.topics {
         h3 {
             margin: 14px 200px;
@@ -167,15 +183,48 @@ main {
             div {
                 display: inline-block;    
             }
+        } 
+    }
+}
+
+@media only screen and (min-width: 930px) {
+    main {
+        section.welcome {
+            top: 25px;
+            h2, p, div {
+                margin-left: 62px;
+            }
+            p {
+                width: 500px;
+            }
         }
-        
+
+        section.episodes {
+            clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%);
+            h3 {
+                padding-top: 100px;
+                margin-left: 62px;
+            }
+            .episodes-container {
+                .left-container, .right-container {
+                    iframe {
+                        max-width: initial;
+                    }
+                } 
+            }
+        }
+
+        section.topics {
+            h3 {
+                margin: 14px 100px;
+            }
+        }
     }
 }
 
 @media only screen and (min-width: 1280px) {
     main {
         margin-top: 200px;
-
         section.welcome {
             h2 {
                 font-size: 64px;
@@ -192,7 +241,9 @@ main {
                 line-height: 24px;
                 margin: 0 200px;
             }
-            button.btn-style {
+            div.btn-style {
+                @include size(345px, 56px);
+                font-size: 18px;
                 margin: 56px 200px;
             }
         }
@@ -220,19 +271,19 @@ main {
                 }
             }
         }
+
         section.episodes {
             height: 1042.6px;
             display: flex;
             align-items: center;
-            clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%);
-           
-           div.ctn-title {
-               align-self: flex-start;
-            h3.title {
-                margin: 186px 200px 15px;
-                padding-top: 0;
-                font-size: 48px;
-            }
+            clip-path: polygon(0% 10%, 100% 0%, 100% 95%, 0% 100%);
+            div.ctn-title {
+                align-self: flex-start;
+                h3.title {
+                    margin: 186px 200px 15px;
+                    padding-top: 0;
+                    font-size: 48px;
+                }
            }
             
             .episodes-container {
@@ -259,6 +310,7 @@ main {
                 }
             }
         }
+
         section.about {
             top: -220px;
             img {
@@ -274,10 +326,11 @@ main {
                 }
             }
         }
+
         section.topics {
             h3.title {
                 font-size: 48px;
-                margin-bottom: 56px;
+                margin: 14px 200px 56px;
             }
             div.topics-container {
                 div {

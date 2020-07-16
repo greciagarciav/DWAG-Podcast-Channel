@@ -29,8 +29,7 @@ p {
   margin: 16px 0; }
 
 .container {
-  width: 100%;
-  height: _; }
+  width: 100%; }
 
 .title {
   font-size: 36px;
@@ -54,7 +53,6 @@ header {
   top: 0;
   z-index: 999; }
   header nav {
-    width: _;
     height: 44px;
     position: relative; }
     header nav img {
@@ -90,10 +88,12 @@ header {
           margin: 12px 16px;
           text-decoration: none;
           cursor: pointer; }
+      header nav ul.menu li:hover {
+        color: #FFFFFF;
+        background-image: linear-gradient(to right, #00F3BB, #0000FF); }
 
 @media only screen and (min-width: 600px) {
   header nav {
-    width: _;
     height: 60px;
     display: flex;
     justify-content: space-between; }
@@ -117,9 +117,13 @@ header {
         color: #00F3BB; }
       header nav ul.menu li a:active {
         text-decoration: line-through; } }
+@media only screen and (min-width: 992px) {
+  header nav {
+    height: 80px; }
+    header nav a {
+      margin-left: 60px; } }
 @media only screen and (min-width: 1280px) {
   header nav {
-    width: _;
     height: 80px; }
     header nav a {
       margin-left: 64px; }
@@ -149,9 +153,12 @@ main {
       color: #0000EC; }
     main section.welcome p.txt-desk {
       display: none; }
-    main section.welcome button.btn-style {
+    main section.welcome div.btn-style {
       width: 288px;
       height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background-image: linear-gradient(to right, #00F3BB, #00F3BB);
       color: #060A24;
       font-size: 16px;
@@ -161,8 +168,12 @@ main {
       font-weight: 600;
       border: none;
       cursor: pointer; }
-    main section.welcome button:hover {
-      color: #FFFFFF;
+      main section.welcome div.btn-style a {
+        color: #060A24;
+        text-decoration: none; }
+      main section.welcome div.btn-style a:hover {
+        color: #FFFFFF; }
+    main section.welcome div:hover {
       background-image: linear-gradient(to right, #00F3BB, #0000FF); }
   main section.episodes {
     position: relative;
@@ -192,14 +203,12 @@ main {
     top: -138px; }
     main section.about img {
       max-width: 460px;
-      width: 100%;
-      height: _; }
+      width: 100%; }
   main section.gallery {
     position: relative;
     top: -100px; }
     main section.gallery img {
       width: 100%;
-      height: _;
       display: block; }
   main section.topics {
     position: relative;
@@ -265,6 +274,22 @@ main {
     flex-direction: row; }
     main section.topics div.topics-container div {
       display: inline-block; } }
+@media only screen and (min-width: 930px) {
+  main section.welcome {
+    top: 25px; }
+    main section.welcome h2, main section.welcome p, main section.welcome div {
+      margin-left: 62px; }
+    main section.welcome p {
+      width: 500px; }
+  main section.episodes {
+    clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%); }
+    main section.episodes h3 {
+      padding-top: 100px;
+      margin-left: 62px; }
+    main section.episodes .episodes-container .left-container iframe, main section.episodes .episodes-container .right-container iframe {
+      max-width: initial; }
+  main section.topics h3 {
+    margin: 14px 100px; } }
 @media only screen and (min-width: 1280px) {
   main {
     margin-top: 200px; }
@@ -280,7 +305,10 @@ main {
       font-size: 16px;
       line-height: 24px;
       margin: 0 200px; }
-    main section.welcome button.btn-style {
+    main section.welcome div.btn-style {
+      width: 345px;
+      height: 56px;
+      font-size: 18px;
       margin: 56px 200px; }
     main section.gallery {
       display: flex;
@@ -305,7 +333,7 @@ main {
       height: 1042.6px;
       display: flex;
       align-items: center;
-      clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%); }
+      clip-path: polygon(0% 10%, 100% 0%, 100% 95%, 0% 100%); }
       main section.episodes div.ctn-title {
         align-self: flex-start; }
         main section.episodes div.ctn-title h3.title {
@@ -340,7 +368,7 @@ main {
           font-size: 16px; }
     main section.topics h3.title {
       font-size: 48px;
-      margin-bottom: 56px; }
+      margin: 14px 200px 56px; }
     main section.topics div.topics-container div {
       width: 260px; }
       main section.topics div.topics-container div img {
@@ -358,11 +386,14 @@ footer {
       text-align: center;
       padding-top: 64px;
       color: #FFFFFF; }
-    footer section.news button {
+    footer section.news div {
       margin: 36px 16px 67px; }
-    footer section.news button.btn-style {
+    footer section.news div.btn-style {
       width: 288px;
       height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background-image: linear-gradient(to right, #00F3BB, #00F3BB);
       color: #060A24;
       font-size: 16px;
@@ -372,7 +403,12 @@ footer {
       font-weight: 600;
       border: none;
       cursor: pointer; }
-    footer section.news button:hover {
+      footer section.news div.btn-style a {
+        color: #060A24;
+        text-decoration: none; }
+      footer section.news div.btn-style a:hover {
+        color: #FFFFFF; }
+    footer section.news div:hover {
       color: #FFFFFF;
       background-image: linear-gradient(to right, #00F3BB, #0000FF); }
   footer p {
@@ -383,6 +419,8 @@ footer {
     footer .sociallogos-container i {
       margin: 0 16px;
       cursor: pointer; }
+    footer .sociallogos-container i:hover {
+      color: #0000FF; }
 
 @media only screen and (min-width: 321px) {
   footer {
@@ -420,11 +458,10 @@ footer {
       footer section.news .title {
         padding-top: 113px;
         font-size: 48px; }
-      footer section.news button {
+      footer section.news div.btn-style {
+        font-size: 18px;
         width: 345px;
         height: 56px; }
-      footer section.news button.btn-style {
-        font-size: 18px; }
     footer div.ctn-networks {
       display: flex;
       justify-content: space-between; }
