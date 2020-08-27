@@ -31,10 +31,15 @@ footer {
             a {
                 color: $sixth-color;
                 text-decoration: none;
+                font-size: 16px;
             }
             a:hover {
                 color: $first-color;
             }
+        }
+        div.btn-style:hover {
+            -webkit-transform:scale(1.1);
+            transform:scale(1.1);
         }
         div:hover {
             color: $first-color;
@@ -49,12 +54,14 @@ footer {
     .sociallogos-container {
         margin: 16px 35px 0;
         display: flex;
-        i {
+        a {
             margin: 0 16px;
             cursor: pointer;
-        }
-        i:hover {
+            text-decoration: none;
             color: $third-color;
+        }
+        a:hover {
+            color: $fifth-color;
         }
     }
 }
